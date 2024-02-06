@@ -1,0 +1,9 @@
+1. Payment method design needs to be done in 1 hour. ✅
+2. Personal info needs to changes (Header, inner title, color) ✅
+3. Responsive issues need to be fixed within an hour, mainly on payment method section ❗✅
+4. Reduce this width and make width and make font size smaller ✅
+5. Drop ✅
+6. Expiry Date needs format
+7. Country listing ✅
+8. Make the fonts installed offline (Stripe - Be Vietnam Pro) ✅
+9. Make it look like this, and make sure it optimized for mobile breaking the lines accordingly. Would be good if we can highlight the currency conversion line in a different style, so it stands out. (perhaps using bootstrap badges, or italic fonts or something similar) ✅

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./country-select-js-master/build/css/countrySelect.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="form-head">
+        <h2 class="form-title">Ready? Let's get this done!</h2>
+    </div>
+
+    <div class="form-upper">
+        <div class="form-wrapper">
+            <div class="container">
+                <section class="form">
+                    <h3 class="form-innerTitle">Select Payment Method</h3>
+                    <div class="form__wrapper">
+                        <div class="form__check" id="visa">
+                            <img src="./images/visa.png" alt="visa card option" width="40" height="40">
+                            <img src="./images/mastercard.svg" alt="master card option" width="40" height="40">
+                            <img src="./images/amex.svg" alt="amex card option" width="40" height="40">
+                            <p class="form__checkText">Choose this if you want to pay with your credit/debit card.</p>
+                        </div>
+                        <div class="form__check" id="paypal">
+                            <img src="./images/paypal.svg" alt="paypal card option" width="120" height="40">
+                            <p class="form__checkText">Choose this if you want to pay with your PayPal account.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="personal-info">
+                    <h3 class="personal-info_title">Personal Info</h3>
+                    <div class="personal__info_form">
+                        <form>
+                            <!-- <div class="form-group"> -->
+                            <label id="req" for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" class="personal-info_inputs"
+                                placeholder="Your Email" required>
+                            <!-- </div> -->
+                            <div class="form-switch">
+                                <!-- <div class="form-group"> -->
+                                <label id="req" for="country">Country:</label>
+                                <input type="text" id="country" class="personal-info_inputs"
+                                    placeholder="Select Country" required>
+                                <input type="hidden" id="country_code">
+                                <!-- </div> -->
+                                <div class="form-input_flex">
+                                    <div class="form-group">
+                                        <label id="req" for="cardNumber">Card Number:</label>
+                                        <input type="tel" id="cardNumber" name="cardNumber" class="personal-info_inputs"
+                                            placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric"
+                                            pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" required>
+                                    </div>
+                                    <div class="form-group carholder">
+                                        <label id="req" for="cardholderName">Cardholder Name:</label>
+                                        <input type="text" id="cardholderName" name="cardholderName"
+                                            class="personal-info_inputs" placeholder="Enter cardholder name" required>
+                                    </div>
+                                </div>
+                                <div class="form-input_flex">
+                                    <div class="form-group">
+                                        <label id="req" for="cvv">CVV:</label>
+                                        <input type="text" id="cvv" name="cvv" class="personal-info_inputs"
+                                            placeholder="Enter CVV" maxlength="4" required>
+                                    </div>
+                                    <div class="form-group expiry">
+                                        <label id="req" for="expiryDate">Expiry Date:</label>
+                                        <input type="text" id="expiryDate" name="expiryDate"
+                                            class="personal-info_inputs" placeholder="MM/YY" maxlength="5" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <!-- PAYMENT DETAILS -->
+        <div class="container">
+            <div class="summary">
+                <div class="summary-info">
+                    <div class="summary-info_wrap">
+                        <p class="summary-info_text content-space">Zillow 149USD Best Value Plan — 25,000 Leads (one
+                            time fee)</p>
+                    </div>
+                    <span class="summary-info__content">$149.00 USD</span>
+                </div>
+                <div class="summary-info">
+                    <p class="summary-info_text highlighted"><span class="summary-info_highlight">Currency
+                            Conversion</span> <b>1.00 USD</b> = <b style="display: inline-block; align-items: center;">
+                            1.53 AUD</b> <span class="summary-info_highlight">by wise.com <img
+                                src="./images/highlighted-conversion.svg" width="20" height="20"
+                                alt="currency icon"></span></p>
+                    <!-- <span>$50.0</span> -->
+                </div>
+                <div class="summary-info">
+                    <p class="summary-info_text">Total</p>
+                    <span>$227.97 AUD</span>
+                </div>
+                <button class="summary-info__button">Proceed with Payment</button>
+                <span class="summary-terms">By continuing, you accept to our Terms of Services and Privacy Policy.
+                    Please note that payments are non-refundable</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./country-select-js-master/build/js/countrySelect.min.js"></script>
+    <script>
+        $("#country").countrySelect();
+    </script>
+    <script src="script/form.js"></script>
+</body>
+
+</html>
